@@ -34,4 +34,4 @@ This section lists essential sanity checks to validate the dataset after cleanin
 8. Confirm fraud label integrity ensuring they contain only binary values
 9. Validate velocity features
 
-These checks ensure this dataset id thoroughly consistent before the feature engineering and modeling stage.
+These checks ensure this dataset is thoroughly consistent before the feature engineering and modeling stage.
