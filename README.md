@@ -28,7 +28,7 @@ This section lists essential sanity checks to validate the dataset after cleanin
 2. Verify currency-related logic and ensure there are no negative values and that the derived exchange rates fall within reasonable range
 3. Validate timestamp integrity and confirm no transaction timestamps occur in the future
 4. Review location consistency to ensure the counts in location_mismatch was generated corrrectly and the country features contain plausible country codes
-5. Check categorical column consistency to review unique calues in channel, source_currency, dest_currency and kyc_tier to ensure there are no unexpected entries
+5. Check categorical column consistency to review unique values in channel, source_currency, dest_currency and kyc_tier to ensure there are no unexpected entries
 6. Validate risk-score ranges ensuring all values fall within expected numeric range
 7. Ensure standardization of formatting used in the features
 8. Confirm fraud label integrity ensuring they contain only binary values
