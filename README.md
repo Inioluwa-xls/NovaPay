@@ -16,4 +16,21 @@ Filling in the missing values in kyc_tier with the mode
 
 Filling in the missing values in device_trust_score using the group's median value
 
-The rows that had missing values for ip_address(420), timestamp(61) and amount_src(4) were dropped as they are unique values that cannot be computed
+The rows that had missing values for ip_address(305), timestamp(61) and amount_src(4) were dropped as they are unique values that cannot be computed
+Duplicated rows which totaled to 194 rows were also dropped
+
+### Sanity Checks for the dataset
+
+This section lists essential sanity checks to validate the dataset after cleaning and imputation
+
+1. Check for invalid numeric values, including negative values in monetary, risk, trust or velocity fields and validate the user age in days is not negative
+2. Verify currency-related logic and ensure there are no negative values and that the derived exchange rates fall within reasonable range
+3. Validate timestamp integrity and confirm no transaction timestamps occur in the future
+4. Review location consistency to ensure the counts in location_mismatch was generated corrrectly and the country features contain plausible country codes
+5. Check categorical column consistency to review unique calues in channel, source_currency, dest_currency and kyc_tier to ensure there are no unexpected entries
+6. Validate risk-score ranges ensuring all values fall within expected numeric range
+7. Ensure standardization of formatting used in the features
+8. Confirm fraud label integrity ensuring they contain only binary values
+9. Validate velocity features
+
+These checks ensure this dataset id thoroughly consistent before the feature engineering and modeling stage.
