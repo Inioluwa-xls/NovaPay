@@ -16,6 +16,7 @@ Filling in the missing values in kyc_tier with the mode
 
 Filling in the missing values in device_trust_score using the group's median value
 
+#### Droppig missing values and duplicated rows
 The rows that had missing values for ip_address(305), timestamp(61) and amount_src(4) were dropped as they are unique values that cannot be computed
 Duplicated rows which totaled to 194 rows were also dropped
 
